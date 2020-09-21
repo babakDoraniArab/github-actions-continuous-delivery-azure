@@ -34,6 +34,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "kind-of": "^6.0.3"
+    "kind-of": "^6.0.3",
+    "node-forge": "^0.10.0"
   }
 }
