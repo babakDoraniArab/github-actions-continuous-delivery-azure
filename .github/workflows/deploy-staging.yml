@@ -4,6 +4,19 @@ on:
   pull_request:
     types: [labeled]
 
+env:
+  DOCKER_IMAGE_NAME: babakDoraniArab-azure-ttt
+  IMAGE_REGISTRY_URL: docker.pkg.github.com
+  #################################################
+  ### USER PROVIDED VALUES ARE REQUIRED BELOW   ###
+  #################################################
+  #################################################
+  ### REPLACE USERNAME WITH GH USERNAME         ###
+  AZURE_WEBAPP_NAME: babakDoraniArab-ttt-app
+  #################################################
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    if: contains(github.event.pull_request.labels.*.name, 'stage')
